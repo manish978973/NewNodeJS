@@ -14,6 +14,6 @@ steps:
     versionSpec: 'fromFile'
   displayName: 'Install Node.js'
 
-- script: |
-    npm run teoo
-  displayName: 'npm build'
+#- script: |
+#    npm run teoo
+#  displayName: 'npm build'
