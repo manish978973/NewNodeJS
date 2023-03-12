@@ -11,8 +11,9 @@ pool: ManishSystem
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: 'fromFile'
-    versionFilePath: './package.json'
+    versionSpec: 'spec'
+    versionSpec: '1.x'
+   # versionFilePath: './package.json'
   displayName: 'Install Node.js'
 
 - script: |
