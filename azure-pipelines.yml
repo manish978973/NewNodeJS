@@ -9,12 +9,13 @@ trigger:
 pool: ManishSystem
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: 'fromFile'
-    versionFilePath: './package.json'
-  displayName: 'Install Node.js'
+#- task: NodeTool@0
+#  inputs:
+#    versionSpec: 'fromFile'
+#    versionFilePath: './package.json'
+#  displayName: 'Install Node.js'
 
 - script: |
-    npm run teoo
+     node -p "process.arch"
+#npm run teoo
   displayName: 'npm build'
