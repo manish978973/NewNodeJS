@@ -37,6 +37,7 @@ stages:
         instructions: 'Please validate the build configuration and resume'
         onTimeout: 'resume'
   - job: B1
+    dependsOn: 'waitForValidation'
     steps:
     - script: |
          npm run teoo
