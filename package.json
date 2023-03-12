@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "teoo": "node ./index.js"
+    "teoo": "node ./index.js",
+    "version": "node -p 'process.arch'"
   },
   "author": "",
   "license": "ISC"
