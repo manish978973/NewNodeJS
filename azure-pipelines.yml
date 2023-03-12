@@ -8,14 +8,39 @@ trigger:
 
 pool: ManishSystem
 
-steps:
-- task: NodeTool@0
-  inputs:
-    versionSource: 'spec'
-    versionSpec: '18.15.0'
-   # versionFilePath: './package.json'
-  displayName: 'Install Node.js'
 
-- script: |
-      npm run teoo
-  displayName: 'npm build'
+stages:
+- stage: A
+  displayName: string
+  displayName: 'STAGE A'
+  jobs:
+  - job: A1
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSource: 'spec'
+        versionSpec: '18.15.0'
+   # versionFilePath: './package.json'
+      displayName: 'Install Node.js'
+
+- stage: B
+  dependsOn: 'A'
+  displayName: 'STAGE B'
+  jobs:
+  - job: B1
+    steps:
+    - script: |
+         npm run teoo
+      displayName: 'npm build'
+  
+#steps:
+#- task: NodeTool@0
+#  inputs:
+#    versionSource: 'spec'
+#    versionSpec: '18.15.0'
+   # versionFilePath: './package.json'
+#  displayName: 'Install Node.js'
+
+#- script: |
+#      npm run teoo
+#  displayName: 'npm build'
