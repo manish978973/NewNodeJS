@@ -16,6 +16,5 @@ steps:
 #  displayName: 'Install Node.js'
 
 - script: |
-     node -p "process.arch"
-#npm run teoo
+      npm run version
   displayName: 'npm build'
