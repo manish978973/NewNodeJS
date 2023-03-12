@@ -11,7 +11,6 @@ pool: ManishSystem
 
 stages:
 - stage: A
-  displayName: string
   displayName: 'STAGE A'
   jobs:
   - job: A1
